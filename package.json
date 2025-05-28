@@ -1,0 +1,19 @@
+{
+  "name": "playwright_test",
+  "version": "1.0.0",
+  "description": "Automated software testing playwright test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Keembee Hernandez",
+  "license": "ISC",
+  "dependencies": {
+    "lint": "^1.1.2",
+    "prettier": "^3.3.3",
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}

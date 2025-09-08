@@ -4,9 +4,9 @@
   "description": "Automated software testing playwright test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "testAll": "npx playwright test",
     "testOnlyOnConfig": "npx playwright test --config=visual.config.ts",
-    "testAll": "npx playwright test"
+    "showAllureReport": "allure serve allure-results"
   },
   "author": "Keembee Hernandez",
   "license": "ISC",

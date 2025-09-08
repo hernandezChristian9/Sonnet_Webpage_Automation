@@ -6,7 +6,14 @@ const config: PlaywrightTestConfig = {
     // testDir: 'sampleVisual/visual',
     testDir: 'SonnetTestScripts',
     // testDir: 'sampleClickTest',
-    // reporter: [['line'], ['list'], ['html']],
+    reporter: [
+        ['line'],
+        ['allure-playwright'], 
+        ['list'], 
+        ['html'],
+        ['./reporters/custom-reporter.ts'],
+        // ['./reporters/pdf-report.ts'],
+    ],
     use: {
         headless: true,
         viewport: { width: 1920, height: 1080 },
@@ -17,6 +24,11 @@ const config: PlaywrightTestConfig = {
         // video: 'retain-on-failure',
         // screenshot: 'only-on-failure',
     },
+    reportSlowTests: {
+        max: 5,
+        threshold: 15000
+    },
+    outputDir: 'test-results/',
     projects: [
         // {
         //     name: 'chromium',

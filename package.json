@@ -4,11 +4,15 @@
   "description": "Automated software testing playwright test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "testAll": "npx playwright PlaywrightTestConfig"
   },
   "author": "Keembee Hernandez",
   "license": "ISC",
   "dependencies": {
+    "allure-playwright": "^3.3.3",
+    "fs-extra": "^11.3.0",
+    "fs-js": "^1.0.6",
     "lint": "^1.1.2",
     "prettier": "^3.3.3",
     "yarn": "^1.22.22"

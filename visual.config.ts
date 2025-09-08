@@ -1,4 +1,5 @@
 import { PlaywrightTestConfig, devices, } from '@playwright/test'
+// import * as os from "node:os";
 
 const config: PlaywrightTestConfig = {
     timeout: 60000,
@@ -8,7 +9,27 @@ const config: PlaywrightTestConfig = {
     // testDir: 'sampleClickTest',
     reporter: [
         ['line'],
-        ['allure-playwright'], 
+        [
+            'allure-playwright',
+            {
+                links: {
+                    issue: {
+                        nameTemplate: "Issue #%s",
+                        urlTemplate: "https://issues.example.com/%s",
+                    },
+                    tms: {
+                        nameTemplate: "TMS #%s",
+                        urlTemplate: "https://tms.example.com/%s",
+                    },
+                },
+                environmentInfo: {
+                    // os_platform: os.platform(),
+                    // os_release: os.release(),
+                    // os_version: os.version(),
+                    // node_version: process.version,
+                },
+            }
+        ], 
         ['list'], 
         ['html'],
         ['./reporters/custom-reporter.ts'],

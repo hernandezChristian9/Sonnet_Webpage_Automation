@@ -17,7 +17,7 @@
     "recordSteps": "npx playwright codegen https://sonnet.digital/",
     "showAllureReport": "allure serve allure-results",
     "cleanCache": "npm cache clean --force",
-    "removeAndInstall": "Remove-Item -Path \"node_modules\" -Recurse -Force -ErrorAction SilentlyContinue && npm install"
+    "removeAndInstall": "Remove-Item -Path \"node_modules\" -Recurse -Force -ErrorAction SilentlyContinue"
   },
   "engines": {
     "node": "^20.17.0 || >=22.9.0",

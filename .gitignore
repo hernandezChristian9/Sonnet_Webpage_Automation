@@ -141,10 +141,10 @@ vite.config.ts.timestamp-*
 .vite/
 
 # Playwright test results and auto generated files that should be gitignored
-./playwright-reports
-test-results/.last-run.json
-sampleVisual/visual/
-playwright-report/index.html
+# ./playwright-reports
+# test-results/.last-run.json
+# sampleVisual/visual/
+# playwright-report/index.html
 
 # Allure test results
 allure-results/

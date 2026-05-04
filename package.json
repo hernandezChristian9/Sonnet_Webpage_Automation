@@ -3,30 +3,15 @@
   "version": "1.0.0",
   "description": "Automated software testing playwright test",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "Keembee Hernandez",
   "license": "ISC",
-  "scripts": {
-    "test": "npx playwright test",
-    "testChrome": "npx playwright test --browser=chromium",
-    "testFirefox": "npx playwright test --browser=firefox",
-    "testAllBrowser": "npx playwright test --headed",
-    "testChromeHeaded": "npx playwright test --headed --browser=chromium",
-    "testFirefoxHeaded": "npx playwright test --headed --browser=firefox",
-    "testSpecificFile": "npx playwright test SonnetTestScripts/Homepage/SonnetHeaderOptions.test.ts",
-    "testOnlyOnConfig": "npx playwright test --config=visual.config.ts",
-    "recordSteps": "npx playwright codegen https://sonnet.digital/",
-    "showAllureReport": "allure serve allure-results",
-    "cleanCache": "npm cache clean --force",
-    "removeAndInstall": "Remove-Item -Path \"node_modules\" -Recurse -Force -ErrorAction SilentlyContinue && npm install"
-  },
-  "engines": {
-    "node": "^20.17.0 || >=22.9.0",
-    "npm": "^11.0.0"
-  },
   "dependencies": {
-    "allure-playwright": "^3.3.3",
-    "fs-extra": "^11.3.0",
-    "prettier": "^3.3.3"
+    "lint": "^1.1.2",
+    "prettier": "^3.3.3",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@playwright/test": "^1.52.0"

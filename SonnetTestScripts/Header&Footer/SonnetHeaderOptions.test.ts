@@ -1,11 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-// test('simple basic test', async ({ page }) => {
-//     await page.goto('https://sonnet.digital/')
-//         const pageTitle = await page.locator('h1')
-//         await expect(pageTitle).toContainText('Premium White Label Digital Solutions for Independent Agencies')
-// });
-
 test('Home Header Option Click', async ({ page }) => {
     await page.goto('https://sonnet.digital/')
     await expect(page.getByRole('link', { name: 'Home', exact: true })).toBeVisible();

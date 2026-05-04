@@ -6,7 +6,6 @@ const config: PlaywrightTestConfig = {
     retries: 0,
     // testDir: 'sampleVisual/visual',
     testDir: 'SonnetTestScripts',
-    // testDir: 'sampleClickTest',
     reporter: [
         ['line'],
         [
@@ -33,7 +32,6 @@ const config: PlaywrightTestConfig = {
         ['list'], 
         ['html'],
         ['./reporters/custom-reporter.ts'],
-        // ['./reporters/pdf-report.ts'],
     ],
     use: {
         headless: true,
@@ -51,33 +49,21 @@ const config: PlaywrightTestConfig = {
     },
     outputDir: 'test-results/',
     projects: [
-        // {
-        //     name: 'chromium',
-        //     use: { ...devices['Desktop Chrome'] },
-        // },
-        // {
-        //     name: 'firefox',
-        //     use: { ...devices['Desktop Firefox'] },
-        // },
-        // {
-        //     name: 'webkit',
-        //     use: { ...devices['Desktop Safari'] },
-        // },
         {
-            name: 'Chromium',
-            use: { browserName: 'chromium' },
+            name: 'chromium',
+            use: { ...devices['Desktop Chrome'] },
         },
         {
-            name: 'Firefox',
-            use: { browserName: 'firefox' },
+            name: 'firefox',
+            use: { ...devices['Desktop Firefox'] },
+        },
+        {
+            name: 'webkit',
+            use: { ...devices['Desktop Safari'] },
         },
         {
             name: 'Microsoft Edge',
             use: { ...devices['Desktop Edge'], channel: 'msedge' }, // or 'msedge-dev'
-        },
-        {
-            name: 'Webkit',
-            use: { browserName: 'webkit' },
         },
     ],
 }

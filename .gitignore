@@ -148,3 +148,4 @@ playwright-report/index.html
 
 # Allure test results
 allure-results/
+node_modules/.package-lock.json

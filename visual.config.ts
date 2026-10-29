@@ -34,12 +34,14 @@ const config: PlaywrightTestConfig = {
         ['./reporters/custom-reporter.ts'],
     ],
     use: {
+        baseURL: 'https://sonnet.digital',
         headless: true,
         viewport: { width: 1920, height: 1080 },
         actionTimeout: 15000,
         ignoreHTTPSErrors: false,
         video: 'off',
-        screenshot: 'off',
+        trace: 'on-first-retry',
+        screenshot: 'only-on-failure',
         // video: 'retain-on-failure',
         // screenshot: 'only-on-failure',
     },
@@ -61,9 +63,13 @@ const config: PlaywrightTestConfig = {
             name: 'webkit',
             use: { ...devices['Desktop Safari'] },
         },
+        // {
+        //     name: 'Microsoft Edge',
+        //     use: { ...devices['Desktop Edge'], channel: 'msedge' }, // or 'msedge-dev'
+        // },
         {
-            name: 'Microsoft Edge',
-            use: { ...devices['Desktop Edge'], channel: 'msedge' }, // or 'msedge-dev'
+        name: 'mobile-chrome',
+        use: { ...devices['Pixel 7'] },
         },
     ],
 }
